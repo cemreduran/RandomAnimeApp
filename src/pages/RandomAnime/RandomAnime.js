@@ -1,5 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {Text, View, ImageBackground, ActivityIndicator} from 'react-native';
+import {
+  Text,
+  View,
+  ImageBackground,
+  ActivityIndicator,
+  Switch,
+} from 'react-native';
 import axios from 'axios';
 
 import styles from './RandomAnime.style';
@@ -10,6 +16,8 @@ const RANDOM_URL = 'https://api.jikan.moe/v4/random/anime';
 const NARUTO_URL = 'https://api.jikan.moe/v4/anime/1735/full';
 
 function RandomAnimePage({navigation}) {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   //We will keep the data of the new anime here.
   const [randomAnimeData, setRandomAnimeData] = useState(null);
 
@@ -19,7 +27,7 @@ function RandomAnimePage({navigation}) {
   }, []);
 
   const fetchData = async () => {
-    const {data} = await axios.get(RANDOM_URL);
+    const {data} = await axios.get(isEnabled ? RANDOM_URL : NARUTO_URL);
     setRandomAnimeData(data.data);
   };
 
@@ -52,6 +60,7 @@ function RandomAnimePage({navigation}) {
   const background_image = {uri: randomAnimeData.images.webp.large_image_url};
 
   // There are so much "<View>" in 'return()' because there are many separate parts on the RandomAnime.
+
   return (
     <ImageBackground
       source={background_image}
@@ -59,6 +68,16 @@ function RandomAnimePage({navigation}) {
       style={styles.image_back_ground}>
       <View style={styles.created_container}>
         <Text style={styles.created_text}>Created by Cemre Duran</Text>
+      </View>
+
+      <View>
+        <Switch
+          trackColor={{false: '#767577', true: '#bdbdbd'}}
+          thumbColor={isEnabled ? 'lightblue' : 'black'}
+          ios_backgroundColor="#3e3e3e"
+          onValueChange={toggleSwitch}
+          value={isEnabled}
+        />
       </View>
       <View style={styles.container}>
         <View style={styles.transparent_container}>
@@ -83,6 +102,7 @@ function RandomAnimePage({navigation}) {
           )}
           <Text style={styles.status}>{randomAnimeData.status}</Text>
         </View>
+        <View />
       </View>
       <View style={styles.tab_place}>
         <Button onPress={fetchData} icon="refresh" />

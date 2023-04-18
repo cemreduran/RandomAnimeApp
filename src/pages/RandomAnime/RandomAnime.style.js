@@ -86,13 +86,11 @@ export default StyleSheet.create({
     padding: 5,
     fontStyle: 'italic',
     fontWeight: '300',
-    marginLeft: 20,
   },
   created_container: {
     top: 40,
-    right: 220,
+    left: 220,
     backgroundColor: 'rgba(0, 255, 255, 0.6)',
     borderRadius: 5,
-    alignSelf: 'flex-end',
   },
 });
