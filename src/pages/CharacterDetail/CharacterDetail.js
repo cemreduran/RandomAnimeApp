@@ -85,8 +85,8 @@ function CharDetailPage({route, navigation}) {
         </View>
       </ScrollView>
       <View style={styles.tab_place}>
-        <Button onPress={goToHomePage} buttonText={'Go Home'} />
-        <Button onPress={goToCharactersPage} buttonText={'Character Page'} />
+        <Button onPress={goToHomePage} icon="home" />
+        <Button onPress={goToCharactersPage} icon="account-multiple" />
       </View>
     </ImageBackground>
   );

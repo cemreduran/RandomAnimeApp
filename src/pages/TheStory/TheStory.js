@@ -50,8 +50,8 @@ function TheStoryPage({route, navigation}) {
         <View style={styles.bottomSpace} />
       </ScrollView>
       <View style={styles.tab_place}>
-        <Button onPress={goToHomePage} buttonText={'Go Home'} />
-        <Button onPress={goToCharactersPage} buttonText={'Character'} />
+        <Button onPress={goToHomePage} icon="home" />
+        <Button onPress={goToCharactersPage} icon="account-multiple" />
       </View>
     </ImageBackground>
   );

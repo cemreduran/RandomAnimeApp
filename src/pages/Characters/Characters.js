@@ -109,9 +109,13 @@ function CharactersPage({route, navigation}) {
         renderItem={renderCharacters}
       />
       <View style={styles.bottomSpace} />
+      {/* //If list is short ; need some space for botton - and i fix it give space */}
       <View style={styles.tab_place}>
-        <Button onPress={goToHomePage} buttonText={'Go Home'} />
-        <Button onPress={goToTheStoryPage} buttonText={'The Story'} />
+        <Button onPress={goToHomePage} icon="home" />
+        <Button
+          onPress={goToTheStoryPage}
+          icon="book-open-page-variant-outline"
+        />
       </View>
     </ImageBackground>
   );

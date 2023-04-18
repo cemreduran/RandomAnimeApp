@@ -85,9 +85,9 @@ function RandomAnimePage({navigation}) {
         </View>
       </View>
       <View style={styles.tab_place}>
-        <Button onPress={fetchData} buttonText={'Refresh'} />
-        <Button onPress={goToTheStory} buttonText={'The Story'} />
-        <Button onPress={goToCharactersPage} buttonText={'Character'} />
+        <Button onPress={fetchData} icon="refresh" />
+        <Button onPress={goToTheStory} icon="book-open-page-variant-outline" />
+        <Button onPress={goToCharactersPage} icon="account-multiple" />
       </View>
     </ImageBackground>
   );
