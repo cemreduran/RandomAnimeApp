@@ -12,7 +12,7 @@ export default StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 5,
   },
-  scroll_view: {
+  container: {
     paddingTop: 300,
   },
   image_back_ground: {
@@ -73,9 +73,10 @@ export default StyleSheet.create({
     bottom: 0,
     width: '87%',
     margin: 25,
-    borderRadius: 50,
     justifyContent: 'space-between',
     flexDirection: 'row',
+    borderRadius: 50,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   created_text: {
     shadowColor: '#000',

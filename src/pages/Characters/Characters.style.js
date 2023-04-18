@@ -4,7 +4,6 @@ export default StyleSheet.create({
   flatList: {
     flex: 1,
     marginBottom: 125,
-    borderEndWidth: 10,
   },
   image_background: {
     paddingTop: 50,
@@ -30,7 +29,7 @@ export default StyleSheet.create({
     margin: 25,
     justifyContent: 'space-evenly',
     flexDirection: 'row',
-    // borderRadius: 50,
-    // backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    borderRadius: 50,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
 });

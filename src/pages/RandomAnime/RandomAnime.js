@@ -60,7 +60,7 @@ function RandomAnimePage({navigation}) {
       <View style={styles.created_container}>
         <Text style={styles.created_text}>Created by Cemre Duran</Text>
       </View>
-      <View style={styles.scroll_view}>
+      <View style={styles.container}>
         <View style={styles.transparent_container}>
           <Text style={styles.title}>{randomAnimeData.title}</Text>
         </View>

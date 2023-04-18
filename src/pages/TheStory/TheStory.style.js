@@ -56,9 +56,9 @@ export default StyleSheet.create({
     bottom: 0,
     width: '87%',
     margin: 25,
-    borderRadius: 50,
     justifyContent: 'space-evenly',
     flexDirection: 'row',
-    // backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    borderRadius: 50,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
 });
